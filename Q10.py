@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 1. Load image and set up center coordinates
-img = cv2.imread('ravi.png')
+img = cv2.imread('raviQ10.png')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 h, w = img.shape[:2]
 
