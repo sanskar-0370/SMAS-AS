@@ -18,15 +18,7 @@ To perform transformations around the image center rather than the default top-l
 
 ---
 
-## Theoretical Breakdown
 
-| Matrix ($A_i$) | Transformation Type | $T(e_1)$ | $T(e_2)$ | Rank | Information Loss | Visual Effect Connection |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| $\begin{bmatrix} 2 & 0 \\ 0 & 0.5 \end{bmatrix}$ | **Scaling** | $\begin{bmatrix} 2 \\ 0 \end{bmatrix}$ | $\begin{bmatrix} 0 \\ 0.5 \end{bmatrix}$ | **2** | No | Stretches the image horizontally by factor 2 while compressing it vertically by 0.5. |
-| $\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$ | **90° Rotation** | $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ | $\begin{bmatrix} -1 \\ 0 \end{bmatrix}$ | **2** | No | Maps $x$-axis to $y$-axis and $y$-axis to negative $x$-axis, rotating the image 90° counter-clockwise. |
-| $\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$ | **Horizontal Shear** | $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$ | $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ | **2** | No | Leaves $x$-axis unchanged while slanting $y$-axis diagonally, shifting rows proportionally to height. |
-| $\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}$ | **y-Axis Reflection** | $\begin{bmatrix} -1 \\ 0 \end{bmatrix}$ | $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ | **2** | No | Negates all $x$-coordinates while keeping $y$-coordinates fixed, creating a horizontal mirror reflection. |
-| $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ | **x-Axis Projection** | $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$ | $\begin{bmatrix} 0 \\ 0 \end{bmatrix}$ | **1** | **Yes** (2D $\rightarrow$ 1D) | Destroys all vertical variation by mapping $y$-coordinates to zero, collapsing the 2D image into a 1D line. |
 
 *Note: For visualization of $A_5$, a minor vertical scaling factor ($y = 0.01$) is used so the collapsed image remains visible on the plot.*
 
