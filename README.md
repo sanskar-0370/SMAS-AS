@@ -1,8 +1,9 @@
 ```markdown
 # Linear Transformations on Images | Assignment 3
+question 10
 
 **Course:** System Modelling, Analysis and Stories–1 (SMAS–1)  
-**Institution:** Indian Institute of Technology Jammu  
+*
 
 This repository implements 2D linear geometric transformations on image pixel vectors defined relative to the image center. Using linear algebra and Python, each pixel coordinate is treated as a 2D vector $\begin{bmatrix} x \\ y \end{bmatrix}$ and transformed using standard 2x2 transformation matrices.
 
